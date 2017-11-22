@@ -47,6 +47,8 @@ var Engine = (function(global) {
          */
         update(dt);
         render();
+        
+        scoreElement.innerHTML = "Score: " + score;
 
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
@@ -80,7 +82,7 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
     }
 
     /* This is called by the update function and loops through all of the
