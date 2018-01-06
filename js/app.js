@@ -77,8 +77,8 @@ var checkCollisions = function() {
     for (var e in allEnemies) {
         var enemy = allEnemies[e];
 
-        var enemyRect = {x: enemy.x, y: enemy.y, width: 1, height: 1};
-        var playerRect = {x: player.x, y: player.y, width: 1, height: 1};
+        var enemyRect = {x: enemy.x, y: enemy.y, width: 0.8, height: 0.8};
+        var playerRect = {x: player.x, y: player.y, width: 0.8, height: 0.8};
 
         if (enemyRect.x < playerRect.x + playerRect.width &&
             enemyRect.x + enemyRect.width > playerRect.x &&
@@ -98,12 +98,12 @@ var checkCollisions = function() {
 // Create instances of Character
 // All enemy objects are in an array called allEnemies
 // The player object is in a variable called player
-    var allEnemies = [];
-    var enemy1 = new Enemy(0, 1);
-    var enemy2 = new Enemy(0, 2);
-    var enemy3 = new Enemy(0, 3);
-    allEnemies.push(enemy1, enemy2, enemy3);
-    var player = new Player();
+var allEnemies = [];
+var enemy1 = new Enemy(0, 1);
+var enemy2 = new Enemy(0, 2);
+var enemy3 = new Enemy(0, 3);
+allEnemies.push(enemy1, enemy2, enemy3);
+var player = new Player();
 
 // This listens for key presses and sends the keys to the
 // Player.handleInput() method.
